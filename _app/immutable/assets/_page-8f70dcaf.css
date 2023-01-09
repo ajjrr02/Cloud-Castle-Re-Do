@@ -1,0 +1,244 @@
+.slide.svelte-c7sg34.svelte-c7sg34 {
+    --bottom-height: 15vh;
+    --height: calc(100vh - var(--bottom-height));
+    background-color: rgb(var(--color-black))
+}
+@media screen and (min-width: 834px) {
+    .slide.svelte-c7sg34.svelte-c7sg34 {
+        --bottom-height: 0vh
+    }
+}
+.content.svelte-c7sg34.svelte-c7sg34 {
+    position: relative
+}
+.content.svelte-c7sg34 .viewport.svelte-c7sg34 {
+    height: var(--height);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative
+}
+.content.svelte-c7sg34 .viewport.svelte-c7sg34:after {
+    content: "";
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 100%);
+    height: 225px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0
+}
+.content.svelte-c7sg34 video.svelte-c7sg34, .content.svelte-c7sg34 img.svelte-c7sg34 {
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    will-change: transform
+}
+.content.svelte-c7sg34 img.svelte-c7sg34 {
+    width: 100%
+}
+@media screen and (min-width: 834px) {
+    .content.svelte-c7sg34 video.svelte-c7sg34 {
+        width: 130%;
+        transform: translate(calc(var(--pan-x) * var(--max) * 1px))
+    }
+    .content.svelte-c7sg34 .viewport.svelte-c7sg34:after {
+        display: none
+    }
+}
+.fade.svelte-c7sg34.svelte-c7sg34 {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--size-ui-fade-bottom-height);
+    background-image: url(../../../svgs/fade-bottom.svg);
+    background-position: center 100%;
+    background-size: 100% 100%;
+    background-repeat: no-repeat
+}
+@media screen and (min-width: 834px) {
+    .fade.svelte-c7sg34.svelte-c7sg34 {
+        display: block
+    }
+}
+.battle-arena.svelte-540c0w.svelte-540c0w {
+    pointer-events: auto;
+    background-color: rgb(var(--color-black))
+}
+.slide.svelte-540c0w.svelte-540c0w {
+    contain: content;
+    overflow: hidden;
+    background-color: rgb(var(--color-black));
+    opacity: 0;
+    pointer-events: none;
+    will-change: opacity;
+    transition-property: opacity;
+    transition-timing-function: var(--easing-in-out-quint);
+    transition-duration: 1s
+}
+.slide.active.svelte-540c0w.svelte-540c0w {
+    opacity: 1;
+    pointer-events: auto
+}
+.ui.svelte-540c0w.svelte-540c0w {
+    position: relative;
+    pointer-events: none
+}
+.ui.svelte-540c0w .item.svelte-540c0w {
+    position: absolute;
+    pointer-events: auto
+}
+.ui.svelte-540c0w .item--close.svelte-540c0w {
+    top: var(--size-ui-padding);
+    left: var(--size-ui-padding)
+}
+.ui__fade.svelte-540c0w.svelte-540c0w {
+    display: none;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    object-fit: cover;
+    object-position: center
+}
+@media screen and (min-width: 834px) {
+    .ui__fade.svelte-540c0w.svelte-540c0w {
+        display: block
+    }
+}
+.ui__fade-bottom.svelte-540c0w.svelte-540c0w {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    contain: strict;
+    background-image: url(../../../svgs/fade-bottom.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    height: 45vh
+}
+.ui__fade-top.svelte-540c0w.svelte-540c0w {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+@media screen and (min-width: 834px) {
+    .ui__fade-top.svelte-540c0w.svelte-540c0w {
+        display: none
+    }
+}
+.ui__details.svelte-540c0w.svelte-540c0w {
+    contain: content;
+    position: absolute;
+    bottom: calc(var(--size-ui-bottom-height) - var(--size-ui-button-height));
+    left: 0;
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(3, auto);
+    justify-content: center;
+    text-align: center
+}
+.ui__details.svelte-540c0w .title.svelte-540c0w {
+    grid-row: 1/span 1;
+    grid-column: 1/2;
+    padding-inline: 40px
+}
+.ui__details.svelte-540c0w .body.svelte-540c0w {
+    contain: content;
+    grid-row: 2/span 1;
+    grid-column: 1/2;
+    max-width: 340px;
+    padding-inline: 40px;
+    box-sizing: content-box;
+    margin: 10px auto 15px
+}
+@media screen and (min-width: 834px) {
+    .ui__details.svelte-540c0w .body.svelte-540c0w {
+        grid-row: 3/span 1;
+        min-height: 38px;
+        margin-bottom: 0
+    }
+}
+.ui__details.svelte-540c0w .pagination.svelte-540c0w {
+    grid-row: 3/span 1;
+    grid-column: 1/2;
+    justify-self: center;
+    align-self: center;
+    align-content: center
+}
+.ui__details.svelte-540c0w .pagination .text.svelte-540c0w {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+    contain: content;
+    font-variant-numeric: tabular-nums
+}
+.ui__details.svelte-540c0w .pagination .number.svelte-540c0w {
+    opacity: 1;
+    width: 6px;
+    text-align: center
+}
+@media screen and (min-width: 834px) {
+    .ui__details.svelte-540c0w .pagination.svelte-540c0w {
+        grid-row: 2/span 1
+    }
+}
+.ui__details.svelte-540c0w .navigation.svelte-540c0w {
+    grid-row: 3/span 1;
+    grid-column: 1/2;
+    justify-content: center
+}
+.ui__details.svelte-540c0w .navigation .btn.svelte-540c0w {
+    pointer-events: auto;
+    will-change: transform, opacity;
+    transition-duration: .35s;
+    transition-timing-function: var(--ease-out-circ)
+}
+.ui__details.svelte-540c0w .navigation .btn--left.svelte-540c0w {
+    transform: translate(-68px)
+}
+.ui__details.svelte-540c0w .navigation .btn--right.svelte-540c0w {
+    transform: translate(68px)
+}
+.ui__details.svelte-540c0w .navigation.first .btn--left.svelte-540c0w {
+    opacity: 0;
+    transform: translate(-50px)
+}
+.ui__details.svelte-540c0w .navigation.first .btn--right.svelte-540c0w {
+    transform: translate(-4px)
+}
+.ui__details.svelte-540c0w .navigation.first .text.svelte-540c0w {
+    opacity: 0
+}
+@media screen and (min-width: 834px) {
+    .ui__details.svelte-540c0w .navigation .btn--left.svelte-540c0w {
+        transform: translate(-295px)
+    }
+    .ui__details.svelte-540c0w .navigation .btn--right.svelte-540c0w {
+        transform: translate(295px)
+    }
+}
+.vfx.svelte-540c0w.svelte-540c0w {
+    pointer-events: none;
+    mix-blend-mode: screen;
+    contain: strict;
+    z-index: 1;
+    opacity: 0;
+    will-change: opacity;
+    transition-property: opacity;
+    transition-timing-function: var(--easing-in-out-quint);
+    transition-duration: 2.55s
+}
+.vfx.show.svelte-540c0w.svelte-540c0w {
+    opacity: 1
+}
+.vfx.svelte-540c0w video.svelte-540c0w {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}

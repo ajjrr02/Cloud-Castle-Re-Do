@@ -1,0 +1,157 @@
+.decoration.svelte-19v3xhd {
+    --h: var(--height, 13px);
+    width: 100%;
+    height: var(--h);
+    contain: strict;
+    user-select: none;
+    position: relative;
+    display: flex;
+    align-items: center
+}
+.decoration--right.svelte-19v3xhd {
+    transform: scaleX(-1)
+}
+img.svelte-19v3xhd {
+    position: absolute;
+    left: 0
+}
+.bar.svelte-19v3xhd {
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(122, 115, 105, .3) 0%, rgba(234, 196, 139, .8) 16%, rgb(122, 105, 105) 33%, rgba(122, 105, 105, .2) 100%)
+}
+.wrapper.svelte-b8d958.svelte-b8d958 {
+    contain: layout;
+    position: relative;
+    width: var(--width, 74px);
+    height: 42px
+}
+.wrapper.fit.svelte-b8d958.svelte-b8d958 {
+    contain: strict
+}
+.wrapper.svelte-b8d958 button.svelte-b8d958 {
+    position: absolute;
+    width: 42px;
+    height: 42px;
+    top: 0;
+    z-index: 2;
+    border-radius: 50%;
+    opacity: 0
+}
+.wrapper.svelte-b8d958 .circle.svelte-b8d958 {
+    position: relative
+}
+.wrapper.svelte-b8d958 .circle .bg.svelte-b8d958, .wrapper.svelte-b8d958 .circle .rim.svelte-b8d958 {
+    position: absolute;
+    top: 0;
+    left: 12px
+}
+.wrapper.svelte-b8d958 .circle .rim.svelte-b8d958 {
+    transform: rotate(0);
+    transition-property: transform;
+    transition-duration: .25s
+}
+.wrapper.svelte-b8d958 .circle .arrow.svelte-b8d958 {
+    position: absolute
+}
+.wrapper.svelte-b8d958 .circle .arrow--large.svelte-b8d958 {
+    top: 15px;
+    left: 28px
+}
+.wrapper.svelte-b8d958 .circle .arrow--small.svelte-b8d958 {
+    top: 17px;
+    left: 32px
+}
+.wrapper.svelte-b8d958 .circle .decor.svelte-b8d958 {
+    position: absolute;
+    top: 17px
+}
+.wrapper.svelte-b8d958 .circle .decor--left.svelte-b8d958 {
+    left: 54px
+}
+.wrapper.svelte-b8d958 .circle .decor--right.svelte-b8d958 {
+    transform: scaleX(-1);
+    left: 7px
+}
+.wrapper.svelte-b8d958 .line.svelte-b8d958 {
+    position: absolute;
+    top: 21px;
+    height: 1px;
+    background: linear-gradient(var(--dir), rgb(122, 115, 105), rgb(105, 90, 67), rgba(122, 105, 105, 0))
+}
+.wrapper.svelte-b8d958 .line--long.svelte-b8d958 {
+    transition-property: transform;
+    transition-duration: .15s;
+    will-change: transform
+}
+.wrapper.svelte-b8d958 .line.wide.svelte-b8d958 {
+    transform: scaleX(1) !important
+}
+.wrapper.svelte-b8d958 .bg.svelte-b8d958 {
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: var(--ease-in-out-quad)
+}
+.wrapper.svelte-b8d958 .bg.svelte-b8d958 {
+    opacity: .5
+}
+.wrapper.svelte-b8d958 .arrow.svelte-b8d958 {
+    opacity: 1
+}
+.wrapper.disabled.svelte-b8d958 button.svelte-b8d958 {
+    cursor: default;
+    pointer-events: none
+}
+.wrapper.disabled.svelte-b8d958 .bg.svelte-b8d958 {
+    opacity: .5
+}
+.wrapper.disabled.svelte-b8d958 .arrow.svelte-b8d958 {
+    transition-property: opacity;
+    transition-duration: .5s;
+    transition-timing-function: var(--ease-in-out-quad);
+    opacity: .2 !important
+}
+.wrapper.left.svelte-b8d958 button.svelte-b8d958 {
+    left: 12px
+}
+.wrapper.left.svelte-b8d958 .circle.svelte-b8d958 {
+    left: 0;
+    transform: scaleX(1)
+}
+.wrapper.left.svelte-b8d958 .line--long.svelte-b8d958 {
+    --dir: to right;
+    transform-origin: left;
+    left: 47px;
+    width: 69px;
+    transform: scaleX(.4)
+}
+.wrapper.left.svelte-b8d958 .line--short.svelte-b8d958 {
+    --dir: to left;
+    left: 0px;
+    width: 19px
+}
+.wrapper.right.svelte-b8d958 button.svelte-b8d958 {
+    right: 12px
+}
+.wrapper.right.svelte-b8d958 .circle.svelte-b8d958 {
+    right: 0;
+    transform: scaleX(-1)
+}
+.wrapper.right.svelte-b8d958 .line--long.svelte-b8d958 {
+    --dir: to left;
+    transform-origin: right;
+    right: 47px;
+    width: 69px;
+    transform: scaleX(.4)
+}
+.wrapper.right.svelte-b8d958 .line--short.svelte-b8d958 {
+    --dir: to right;
+    right: 0px;
+    width: 19px
+}
+.wrapper.over.svelte-b8d958:not(.disabled) .bg.svelte-b8d958 {
+    opacity: 1
+}
+.wrapper.over.svelte-b8d958:not(.disabled) .circle .rim.svelte-b8d958 {
+    transform: rotate(.5turn)
+}

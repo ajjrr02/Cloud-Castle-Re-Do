@@ -1,0 +1,1 @@
+import{P as e,a as t,b as o}from"./page-creatures-711ff2c0.js";function r(){return{title:e,intro:t,creatures:o}}const _=Object.freeze(Object.defineProperty({__proto__:null,load:r},Symbol.toStringTag,{value:"Module"}));export{_,r as l};

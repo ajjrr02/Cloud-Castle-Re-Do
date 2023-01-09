@@ -1,0 +1,1 @@
+const e="The Lore",o="https://customer-j2pucm9cgwsoea8r.cloudflarestream.com/d81f5d6e90fc8167d699e9f582a52515/manifest/video.m3u8";function t(){return{title:e,video:o}}const r=Object.freeze(Object.defineProperty({__proto__:null,load:t},Symbol.toStringTag,{value:"Module"}));export{r as _,t as l};

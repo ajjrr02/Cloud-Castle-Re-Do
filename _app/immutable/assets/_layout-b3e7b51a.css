@@ -1,0 +1,549 @@
+:root {
+    --color-white: 255 255 255;
+    --color-black: 0 0 0;
+    --color-gold: 255 245 195;
+    --color-faded-gold: 178 173 146;
+    --color-bright: 236 234 223;
+    --color-warm-grey: 156 155 149;
+    --color-red: 255 77 0;
+    --color-red-light: 55 176 142;
+    --color-green: 64 180 14;
+    --color-green-light: 196 255 171;
+    --color-blue: 0 128 255;
+    --color-blue-light: 171 213 255;
+    --color-yellow: 255 166 0;
+    --color-yellow-light: 255 226 171;
+    --color-orange: 255 123 0;
+    --color-orange-light: 255 212 171;
+    --color-inner-shadow: 205 192 128;
+    --gradient-centered: linear-gradient(90deg, rgb(var(--color-gold) / 0) 0%, rgb(var(--color-bright)) 50%, rgb(var(--color-gold) / 0) 100%);
+    --font-primary: "Averia Gruesa Libre";
+    --font-secondary: "Casta";
+    --size-ui-padding: 19px;
+    --size-ui-bottom-height: 90px;
+    --size-ui-menu-max-width: calc(540px + 2 * var(--size-ui-padding));
+    --size-ui-bottom-height: 84px;
+    --size-ui-button-height: 42px;
+    --size-ui-fade-bottom-height: 35vh;
+    --size-ui-logo-top: calc(var(--size-ui-mobile-nav-top) + 5px);
+    --size-ui-mobile-nav-top: 32px;
+    --font-size-title: 50px;
+    --font-size-h1: 48px;
+    --font-size-h2: 32px;
+    --font-size-h3: 20px;
+    --font-size-h4: 16px;
+    --font-size-b1: 29px;
+    --font-size-b2: 17px;
+    --font-size-b3: 16px;
+    --font-size-b4: 12px;
+    --font-size-l1: 14px;
+    --font-size-l2: 12px;
+    --font-size-d1: 12px;
+    --font-size-d2: 12px;
+    --font-size-d3: 10px;
+    --font-size-d4: 10px;
+    --font-size-base: 16px;
+    --ease-in-quad: cubic-bezier(.55, .085, .68, .53);
+    --ease-in-cubic: cubic-bezier(.55, .055, .675, .19);
+    --ease-in-quart: cubic-bezier(.895, .03, .685, .22);
+    --ease-in-quint: cubic-bezier(.755, .05, .855, .06);
+    --ease-in-expo: cubic-bezier(.95, .05, .795, .035);
+    --ease-in-circ: cubic-bezier(.6, .04, .98, .335);
+    --ease-out-quad: cubic-bezier(.25, .46, .45, .94);
+    --ease-out-cubic: cubic-bezier(.215, .61, .355, 1);
+    --ease-out-quart: cubic-bezier(.165, .84, .44, 1);
+    --ease-out-quint: cubic-bezier(.23, 1, .32, 1);
+    --ease-out-expo: cubic-bezier(.19, 1, .22, 1);
+    --ease-out-circ: cubic-bezier(.075, .82, .165, 1);
+    --ease-in-out-quad: cubic-bezier(.455, .03, .515, .955);
+    --ease-in-out-cubic: cubic-bezier(.645, .045, .355, 1);
+    --ease-in-out-quart: cubic-bezier(.77, 0, .175, 1);
+    --ease-in-out-quint: cubic-bezier(.86, 0, .07, 1);
+    --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+    --ease-in-out-circ: cubic-bezier(.785, .135, .15, .86);
+    --ease-out-back: cubic-bezier(.34, 1.85, .64, 1)
+}
+@media (min-width: 834px) {
+    :root {
+        --size-ui-padding: 42px;
+        --size-ui-bottom-height: 100px;
+        --size-ui-logo-top: calc(var(--size-ui-padding) + 5px)
+    }
+}
+@media screen and (min-width: 834px) {
+    :root {
+        --font-size-title: 90px
+    }
+}
+@font-face {
+    font-family: Averia Gruesa Libre;
+    src: url(../../../fonts/AveriaGruesaLibre-Regular.woff2) format("woff2"), url(../../../fonts/AveriaGruesaLibre-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Casta;
+    src: url(../../../fonts/Casta-Light.woff2) format("woff2"), url(../../../fonts/Casta-Light.woff) format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Casta;
+    src: url(../../../fonts/Casta-Medium.woff2) format("woff2"), url(../../../fonts/Casta-Medium.woff) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+@font-face {
+    font-family: Casta;
+    src: url(../../../fonts/Casta-Regular.woff2) format("woff2"), url(../../../fonts/Casta-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: normal
+}
+@font-face {
+    font-family: Casta;
+    src: url(../../../fonts/Casta-Condensed.woff2) format("woff2"), url(../../../fonts/Casta-Condensed.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    font-stretch: condensed
+}
+*, *:before, *:after {
+    box-sizing: border-box
+}
+* {
+    margin: 0
+}
+html, body {
+    height: 100%
+}
+body {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed
+}
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%
+}
+ol, ul {
+    list-style: none;
+    padding: 0
+}
+.type\:t1 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-title);
+    font-weight: 400;
+    line-height: 90%;
+    text-align: center;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    font-feature-settings: "liga"off;
+    color: rgb(var(--color-bright));
+    user-select: none;
+    font-stretch: condensed
+}
+.type\:h1, .type\:h2, .type\:h3, .type\:h4 {
+    color: var(--color, inherit);
+    font-size: var(--size, var(--font-size-base));
+    font-family: var(--font-secondary);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-style: normal;
+    user-select: none
+}
+.type\:h1 {
+    --color: rgb(var(--color-gold));
+    --size: var(--font-size-h1);
+    font-weight: 300
+}
+.type\:h2 {
+    --color: rgb(var(--color-gold));
+    --size: var(--font-size-h2);
+    font-weight: 400
+}
+.type\:h3 {
+    --color: rgb(var(--color-gold));
+    --size: var(--font-size-h3);
+    font-weight: 400
+}
+.type\:h4 {
+    --color: rgb(var(--color-faded-gold));
+    --size: var(--font-size-h4);
+    font-weight: 500
+}
+.type\:b1, .type\:b2, .type\:b3, .type\:b4 {
+    font-family: var(--font, var(--font-primary));
+    font-size: var(--size, var(--font-size-base));
+    color: var(--color, inherit);
+    font-style: normal;
+    user-select: none
+}
+.type\:b1 {
+    --font: var(--font-secondary);
+    --size: var(--font-size-b1);
+    --color: rgb(var(--color-gold));
+    font-weight: 300;
+    line-height: 130%;
+    font-feature-settings: "ordn"on, "ss01"on
+}
+.type\:b2 {
+    --color: rgb(var(--color-warm-grey) / .9);
+    --font: var(--font-secondary);
+    --size: var(--font-size-b2);
+    font-weight: 300;
+    line-height: 160%;
+    font-feature-settings: "liga"off
+}
+.type\:b3 {
+    --color: rgb(var(--color-gold));
+    --font: var(--font-primary);
+    --size: var(--font-size-b3);
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -.01em;
+    text-shadow: 0px 1px 2px rgb(var(--color-black)/.3)
+}
+.type\:b4 {
+    --font: var(--font-primary);
+    --color: rgb(var(--color-warm-grey) / .9);
+    --size: var(--font-size-b4);
+    font-weight: 400;
+    line-height: 160%
+}
+.type\:l1, .type\:l2 {
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    line-height: 110%;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(var(--color-gold));
+    user-select: none
+}
+.type\:l1 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-l1)
+}
+.type\:l2 {
+    font-family: var(--font-secondary);
+    font-size: var(--font-size-l2)
+}
+.type\:d1, .type\:d2, .type\:d3, .type\:d4 {
+    color: var(--color, var(--_c));
+    font-family: var(--font-primary);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -.01em;
+    user-select: none
+}
+.type\:d1 {
+    --_c: rgb(var(--color-faded-gold) / .9);
+    font-size: var(--font-size-d1)
+}
+.type\:d2 {
+    --_c: rgb(var(--color-warm-grey) / .8);
+    font-size: var(--font-size-d2);
+    text-shadow: 0px 1px 1px rgb(var(--color-black))
+}
+.type\:d3 {
+    --_c: rgb(var(--color-faded-gold));
+    font-size: var(--font-size-d3)
+}
+.type\:d4 {
+    --_c: rgb(var(--color-warm-grey) / .7);
+    font-size: var(--font-size-d4);
+    text-shadow: 0px 1px 1px rgb(var(--color-black))
+}
+.type\:h3-h1 {
+    --color: rgb(var(--color-gold));
+    --size: var(--font-size-h3);
+    --decor-space: -2em;
+    color: var(--color, inherit);
+    font-size: var(--size, var(--font-size-base));
+    font-family: var(--font-secondary);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-style: normal;
+    user-select: none;
+    font-weight: 300
+}
+@media screen and (min-width: 834px) {
+    .type\:h3-h1 {
+        --size: var(--font-size-h1);
+        --decor-space: -1em
+    }
+}
+.type\:h4-h3 {
+    --color: rgb(var(--color-faded-gold));
+    --size: var(--font-size-h4);
+    color: var(--color, inherit);
+    font-size: var(--size, var(--font-size-base));
+    font-family: var(--font-secondary);
+    letter-spacing: .3em;
+    text-transform: uppercase;
+    line-height: 110%;
+    font-style: normal;
+    user-select: none;
+    font-weight: 500
+}
+@media screen and (min-width: 834px) {
+    .type\:h4-h3 {
+        --color: rgb(var(--color-gold));
+        --size: var(--font-size-h3);
+        font-weight: 400
+    }
+}
+.type\:b4-b2 {
+    --font: var(--font-primary);
+    --size: var(--font-size-b4);
+    font-family: var(--font);
+    font-size: var(--size);
+    color: rgb(var(--color-warm-grey)/.9);
+    font-style: normal;
+    user-select: none;
+    font-weight: 400;
+    line-height: 160%
+}
+@media screen and (min-width: 834px) {
+    .type\:b4-b2 {
+        --size: var(--font-size-b2);
+        --font: var(--font-secondary);
+        font-weight: 300;
+        font-feature-settings: "liga"off
+    }
+}
+.type\:b3-b4 {
+    --c: var(--color, rgb(var(--color-warm-grey) / .9));
+    --font: var(--font-primary);
+    --size: var(--font-size-b4);
+    font-family: var(--font);
+    font-size: var(--size);
+    color: var(--c);
+    font-style: normal;
+    user-select: none;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: -.01em;
+    text-shadow: 0px 1px 2px rgb(var(--color-black)/.3)
+}
+@media screen and (min-width: 834px) {
+    .type\:b3-b4 {
+        --size: var(--font-size-b3);
+        text-shadow: none;
+        letter-spacing: normal
+    }
+}
+.type\:l2-l1 {
+    --c: var(--color, rgb(var(--color-gold)));
+    --size: var(--font-size-l2);
+    font-family: var(--font-secondary);
+    font-size: var(--size);
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    line-height: 110%;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--c);
+    user-select: none
+}
+@media screen and (min-width: 834px) {
+    .type\:l2-l1 {
+        --size: var(--font-size-l1)
+    }
+}
+.type\:d2-d3 {
+    font-family: var(--font-primary);
+    font-size: var(--font-size-d2);
+    color: rgb(var(--color-warm-grey)/.8);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%;
+    letter-spacing: -.01em;
+    user-select: none;
+    text-shadow: 0px 1px 1px rgb(var(--color-black))
+}
+@media screen and (min-width: 834px) {
+    .type\:d2-d3 {
+        font-size: var(--font-size-d3);
+        color: rgb(var(--color-faded-gold));
+        text-shadow: none
+    }
+}
+.type\:decor1>span {
+    position: relative
+}
+.type\:decor1>span:before, .type\:decor1>span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-image: url(../../../icons/detail-static.svg);
+    background-position: center;
+    background-repeat: no-repeat
+}
+.type\:decor1>span:before {
+    left: var(--decor-space, -1em)
+}
+.type\:decor1>span:after {
+    right: var(--decor-space, -1em);
+    transform: scaleX(-1)
+}
+.type\:decor2>span {
+    position: relative
+}
+.type\:decor2>span:before, .type\:decor2>span:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 100%;
+    background-image: url(/icons/detail-static-white.svg);
+    background-position: center;
+    background-repeat: no-repeat
+}
+.type\:decor2>span:before {
+    left: var(--decor-space, -1em)
+}
+.type\:decor2>span:after {
+    right: var(--decor-space, -1em);
+    transform: scaleX(-1)
+}
+.type\:shadow {
+    --_color: var(--shadow-color, rgb(var(--color-inner-shadow)));
+    text-shadow: 0px 0px var(--_color), -.002em 0 var(--_color), -.004em 0 var(--_color), -.006em 0 var(--_color), -.008em 0 var(--_color), -.01em 0 var(--_color), -.012em 0 var(--_color), -.014em 0 var(--_color), -.016em 0 var(--_color), -.018em 0 var(--_color), -.02em 0 var(--_color), -.022em 0 var(--_color), -.024em 0 var(--_color), -.026em 0 var(--_color), -.028em 0 var(--_color), -.03em 0 var(--_color), -.032em 0 var(--_color)
+}
+.type\:center {
+    text-align: center
+}
+.type\:ss1 {
+    font-feature-settings: "ss01"on
+}
+.type\:links a {
+    color: rgb(var(--color-gold));
+    text-decoration: none;
+    background-image: linear-gradient(rgb(var(--color-gold)), rgb(var(--color-gold)));
+    background-size: 100% 1px;
+    background-position: 0 90%;
+    background-repeat: no-repeat
+}
+.type\:links a:hover {
+    color: rgb(var(--color-faded-gold))
+}
+.type\:underline {
+    color: rgb(var(--color-gold));
+    text-decoration: none;
+    background-image: linear-gradient(rgb(var(--color-gold)), rgb(var(--color-gold)));
+    background-size: 100% 1px;
+    background-position: 0 90%;
+    background-repeat: no-repeat
+}
+.layout\:stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start
+}
+.layout\:stack>* {
+    margin-block: 0
+}
+.layout\:stack>*+* {
+    margin-block-start: var(--space, 1.5rem)
+}
+.layout\:cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space, 1rem);
+    justify-content: flex-start;
+    align-items: center
+}
+.layout\:overlay {
+    display: grid;
+    width: 100%;
+    height: 100%
+}
+.layout\:overlay>* {
+    grid-area: 1/-1;
+    width: 100%;
+    height: 100%;
+    max-height: 100vh
+}
+.layout\:main {
+    width: 100%;
+    height: 100%
+}
+.layout\:main>.layout\:main\:page {
+    position: absolute;
+    inset: 0;
+    contain: strict;
+    pointer-events: none
+}
+.layout\:main>.layout\:main\:page>*:not(.click-through) {
+    pointer-events: auto
+}
+body {
+    font-size: var(--font-size-base);
+    font-family: var(--font-primary);
+    color: rgb(var(--color-white));
+    background-color: rgb(var(--color-black))
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+body {
+    position: fixed;
+    overscroll-behavior-y: none;
+    overscroll-behavior-x: none
+}
+#app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: scroll;
+    -ms-scroll-chaining: none;
+    overscroll-behavior: contain
+}
+.viewContainer {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden
+}
+*, *:after, *:before {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    touch-action: pan-y
+}
+.util\:reset-btn {
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+    cursor: pointer;
+    background: transparent;
+    color: currentColor;
+    appearance: none
+}
+.is-hover {
+    cursor: pointer
+}
+track, caption {
+    display: none !important
+}
